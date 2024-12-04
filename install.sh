@@ -156,6 +156,6 @@ echo $COMPOSER_ALLOW_SUPERUSER
 composer create-project athlon1600/php-proxy-app:dev-master /var/www/ --no-interaction
 
 # optimize composer
-composer dumpautoload -o --working-dir=/var/www/ --no-interaction
+composer dumpautoload -o --working-dir=/var/www/
 
 install_cron
