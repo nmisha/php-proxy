@@ -7,6 +7,9 @@
 # Apache site settings
 SITE=php_proxy.conf
 
+COMPOSER_ALLOW_SUPERUSER=1
+echo $COMPOSER_ALLOW_SUPERUSER
+
 # Apache file to where this will be written
 CONF_FILE=/etc/apache2/sites-available/$SITE
 
@@ -148,6 +151,7 @@ a2ensite $SITE
 service apache2 restart
 
 export COMPOSER_ALLOW_SUPERUSER=1
+echo $COMPOSER_ALLOW_SUPERUSER
 
 composer create-project athlon1600/php-proxy-app:dev-master /var/www/ --no-interaction
 
