@@ -150,6 +150,6 @@ service apache2 restart
 composer create-project athlon1600/php-proxy-app:dev-master /var/www/ --no-interaction
 
 # optimize composer
-composer dumpautoload -o --working-dir=/var/www/
+composer dumpautoload -o --working-dir=/var/www/ --no-interaction
 
 install_cron
